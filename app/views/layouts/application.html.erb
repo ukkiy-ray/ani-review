@@ -4,12 +4,28 @@
     <title>AniReview</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <div class="header-contents">
+        <div class="header-left">
+          <%= link_to image_tag("/images/logo.png", class: 'logo'), root_path %>
+        </div>
+        <div class="header-right">
+          <% if user_signed_in? %>
+            <%= link_to "こんにちは、#{current_user.nickname}さん", "#", class: "hello" %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "sign-out" %>
+          <% else %>
+            <%= link_to "ログイン", new_user_session_path, class: "sign-in" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "sign-up" %>
+          <% end %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

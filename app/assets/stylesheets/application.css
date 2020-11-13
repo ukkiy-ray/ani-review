@@ -13,3 +13,125 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+  box-sizing: border-box;
+ }
+
+ /* ヘッダー======================= */
+
+header {
+  background-color: #999999;    /* rgbは 0, 0, 68と迷い中 */
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  margin-left: 5px;
+}
+
+.header-right {
+  margin-right: 50px;
+  line-height: 80px;
+  font-size: 20px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.sign-in {
+  margin-right: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.hello {
+  margin-right: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: black;
+}
+
+.sign-out {
+  text-decoration: none;
+  color: black;
+}
+
+/* =========== ここまでヘッダー ============ */
+
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.side-bar {
+  height: 100%;
+  width: 15%;
+  background-color: #333333;
+}
+
+.main-wrapper {
+  height: 100%;
+  width: 85%;
+  background-color: #fafafa;
+}
+
+.main-container {
+  height: 100%;
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.main-title {
+  font-size: 28px;
+  font-family: 'Kosugi Maru', sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+/* ユーザー登録ページ */
+
+.user-form {
+  height: 100vh;
+  width: 100%;
+  padding: 200px;
+  text-align: center;
+}
+
+.form-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.form-content {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+}
+
+.field {
+  margin-top: 10px;
+}
+
+.input {
+  width: 40%;
+}
+
+.actions {
+  margin-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+}
