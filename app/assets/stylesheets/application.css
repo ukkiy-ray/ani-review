@@ -93,6 +93,7 @@ header {
   width: 75%;
   margin: 0 auto;
   padding-top: 120px;
+  overflow: auto;
 }
 
 .main-title {
@@ -109,6 +110,7 @@ header {
   padding: 4px;
   color: #ff6600;
   border: 1px solid #333333;
+  margin-bottom: 10px;
 }
 
 .post-wrap {
