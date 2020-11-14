@@ -9,6 +9,7 @@ class Category < ActiveHash::Base
     { id: 7, name: 'コメディ/ギャグ' },
     { id: 8, name: '戦争/ミリタリー' },
     { id: 9, name: 'ドラマ/青春' },
-    { id: 10, name: 'ショート' }
+    { id: 10, name: 'ショート' },
+    { id: 11, name: 'その他'}
   ]
 end

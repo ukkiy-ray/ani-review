@@ -10,7 +10,7 @@
         <% @posts.each do |post| %>
           <div class="post">
             <div class="title">
-              <%= post.title %>
+              <%= link_to "#{post.title}", post_path(post.id), class: "link-to-show" %>
             </div>
             <div class="genre">
               <div class="category">
