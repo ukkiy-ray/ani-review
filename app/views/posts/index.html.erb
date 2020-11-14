@@ -3,6 +3,31 @@
   <div class="main-wrapper">
     <div class="main-container">
       <div class="main-title">- 投稿一覧 -</div>
+      <% if user_signed_in? %>
+        <%= link_to "New Post", new_post_path, class:"post-btn"%>
+      <% end %>
+      <div class="post-wrap">
+        <% @posts.each do |post| %>
+          <div class="post">
+            <div class="title">
+              <%= post.title %>
+            </div>
+            <div class="genre">
+              <div class="category">
+                <%= post.category.name %>
+              </div>
+
+              <ul class="tag">
+                <li class="tag-list">
+                  <%post.tags.each do |tag| %>
+                    #<%=tag.name%>
+                  <%end%>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
