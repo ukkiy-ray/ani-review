@@ -1,0 +1,70 @@
+<div class="side-title">- Category -</div>
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [2] %>
+      <div class="post-squeeze">
+        <%= f.submit "SF/ファンタジー", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [3] %>
+      <div class="post-squeeze">
+        <%= f.submit "恋愛/ラブコメ", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [4] %>
+      <div class="post-squeeze">
+        <%= f.submit "日常/ほのぼの", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [5] %>
+      <div class="post-squeeze">
+        <%= f.submit "アクション/バトル", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [6] %>
+      <div class="post-squeeze">
+        <%= f.submit "スポーツ/競技", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [7] %>
+      <div class="post-squeeze">
+        <%= f.submit "コメディ/ギャグ", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [8] %>
+      <div class="post-squeeze">
+        <%= f.submit "戦争/ミリタリー", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [9] %>
+      <div class="post-squeeze">
+        <%= f.submit "ドラマ/青春", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [10] %>
+      <div class="post-squeeze">
+        <%= f.submit "ショート", class: "search-btn" %>
+      </div>
+    <% end %>
+
+    <%= form_with(url: squeeze_posts_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.hidden_field :category_id, :value => [11] %>
+      <div class="post-squeeze">
+        <%= f.submit "その他", class: "search-btn" %>
+      </div>
+    <% end %>

@@ -36,6 +36,10 @@ class PostsController < ApplicationController
     render json:{ keyword: tag }
   end
 
+  def squeeze
+    @posts = Post.where(category_id: params[:category_id]).order(created_at: :desc)
+  end
+
   private
 
   def post_params

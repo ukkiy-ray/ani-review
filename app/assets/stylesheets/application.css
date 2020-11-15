@@ -70,6 +70,31 @@ header {
 
 /* =========== ここまでヘッダー ============ */
 
+.side-title {
+  margin: 150px 0 20px 0;
+  font-size: 28px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  color: #fafafa;
+}
+
+.search-form {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.post-squeeze {
+  margin-top: 15px;
+}
+
+.search-btn {
+  border: none;
+  background: none;
+  color: aliceblue;
+}
+
+
+/* ================ ここからトップページ ====================*/
 .main {
   height: 100vh;
   width: 100%;
@@ -86,6 +111,11 @@ header {
   height: 100%;
   width: 85%;
   background-color: #fafafa;
+}
+
+.sign {
+  text-decoration: none;
+  color: #ff6600;
 }
 
 .main-container {
@@ -110,6 +140,12 @@ header {
   padding: 4px;
   color: #ff6600;
   border: 1px solid #333333;
+  margin-bottom: 10px;
+}
+
+.note {
+  text-decoration: none;
+  color: #333333;
   margin-bottom: 10px;
 }
 
@@ -281,4 +317,16 @@ header {
   text-decoration: none;
   color: #333333;
   display: inline-block;
+}
+
+/* 検索結果ページ */
+.nothing {
+  font-size: 18px;
+}
+
+.link_to_root {
+  text-decoration: none;
+  color: #333333;
+  display: block;
+  margin-top: 10px;
 }
