@@ -22,6 +22,14 @@ class PostsController < ApplicationController
     @tags = @post.tags
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    if user_signed_in? && current_user.id == @post.user_id
+      @post.destroy
+    end
+    redirect_to root_path
+  end
+
   def search
     return nil if params[:keyword] == ""
     tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )

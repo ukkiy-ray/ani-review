@@ -17,7 +17,8 @@
             <div class="link-wrap">
               <%= link_to "トップページに戻る", root_path, class: "link_to_top" %>
               <% if user_signed_in? && @post.user_id == current_user.id %>
-                <%= link_to "編集する", edit_post_path(@post.id), class: "link_to_edit" %>
+                <%= link_to "編集する", "#", class: "link_to_edit" %>
+                <%= link_to '削除', post_path(@post.id), method: :delete, class:'post-destroy' %>
               <% end %>
             </div>
             <ul>
