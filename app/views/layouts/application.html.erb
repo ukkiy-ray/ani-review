@@ -17,7 +17,7 @@
         </div>
         <div class="header-right">
           <% if user_signed_in? %>
-            <%= link_to "こんにちは、#{current_user.nickname}さん", "#", class: "hello" %>
+            <%= link_to "こんにちは、#{current_user.nickname}さん", user_path(current_user.id), class: "hello" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "sign-out" %>
           <% else %>
             <%= link_to "ログイン", new_user_session_path, class: "sign-in" %>

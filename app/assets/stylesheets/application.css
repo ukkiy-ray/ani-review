@@ -287,9 +287,19 @@ header {
   justify-content: space-between;
 }
 
+.count {
+  color: #333333;
+  margin-bottom: 6px;
+}
+
 .post-user {
   font-size: 18px;
   margin: 8px 16px 0 0;
+}
+
+.link-to-user {
+  text-decoration: none;
+  color: #333333;
 }
 
 .content {

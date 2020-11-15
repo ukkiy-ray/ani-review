@@ -9,7 +9,7 @@
           <div class="show-title">
             <%= @post.title %>
             <div class="post-user">
-              <%= @post.user.nickname %>
+              <%= link_to "#{@post.user.nickname}", user_path(@post.user.id), class: "link-to-user" %>
             </div>
           </div>
           <div class="content">

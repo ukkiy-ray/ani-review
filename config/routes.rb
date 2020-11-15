@@ -7,4 +7,5 @@ Rails.application.routes.draw do
       get 'squeeze'
     end
   end
+  resources :users, only: :show
 end
