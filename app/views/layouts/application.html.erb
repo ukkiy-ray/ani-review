@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -14,6 +15,11 @@
       <div class="header-contents">
         <div class="header-left">
           <%= link_to image_tag("/images/logo.png", class: 'logo'), root_path %>
+
+          <%= form_with(url: post_search_posts_path, local: true, method: :get, class: "post-search-form") do |form| %>
+            <%= form.text_field :keyword, placeholder: "フリーワードで検索", class: "search-input" %>
+          <% end %>
+
         </div>
         <div class="header-right">
           <% if user_signed_in? %>

@@ -19,17 +19,33 @@
               <%= link_to "#{post.title}", post_path(post.id), class: "link-to-show" %>
             </div>
             <div class="genre">
-              <div class="category">
-                <%= post.category.name %>
-              </div>
+              <div class="upper-content">
+                <div class="category">
+                  <%= post.category.name %>
+                </div>
 
-              <ul class="tag">
-                <li class="tag-list">
-                  <%post.tags.each do |tag| %>
-                    #<%=tag.name%>
-                  <%end%>
-                </li>
-              </ul>
+                <ul class="tag">
+                  <li class="tag-list">
+                    <%post.tags.each do |tag| %>
+                      #<%=tag.name%>
+                    <%end%>
+                  </li>
+                </ul>
+              </div>
+              <div class="like-count">
+                <% if user_signed_in? %>
+                  <% if post.likes.find_by(user_id: current_user.id).present? %>
+                    <span class="fa fa-heart unlike-btn"></span>
+                    <%= "#{post.likes.count}" %>
+                  <% else %>
+                    <span class="fa fa-heart like-btn"></span>
+                    <%= "#{post.likes.count}" %>
+                  <% end %>
+                <% else %>
+                  <span class="fa fa-heart unlike-btn"></span>
+                  <%= "#{post.likes.count}" %>
+                <% end %>
+              </div>
             </div>
           </div>
         <% end %>

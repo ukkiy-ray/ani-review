@@ -37,6 +37,27 @@ header {
 
 .header-left {
   margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.post-search-form {
+  margin-left: 25px;
+  width: 400px;
+}
+
+.search-input {
+  width: 60%;
+  height: 28px;
+  padding:0 10px; 
+  border: none;
+  border-radius:25px;
+  outline:0;
+  background:#eee;
+}
+
+.search-input::placeholder {
+  font-size: 12px;
 }
 
 .header-right {
@@ -91,6 +112,7 @@ header {
   border: none;
   background: none;
   color: aliceblue;
+  outline:0;
 }
 
 
@@ -174,7 +196,18 @@ header {
 }
 
 .genre {
+  margin-top: 2px;
+}
+
+.upper-content {
   display: flex;
+}
+
+.like-count {
+  margin-top: 2px;
+  font-size: 16px;
+  color: #333333;
+  text-align: right;
 }
 
 .tag {
@@ -212,6 +245,7 @@ header {
 .input {
   width: 40%;
   padding: 0 4px;
+  outline:0;
 }
 
 .actions {
@@ -241,21 +275,25 @@ header {
 .post-input {
   width: 100%;
   padding: 0 4px;
+  outline:0;
 }
 
 .title-input {
   width: 100%;
   padding: 4px;
   font-size: 24px;
+  outline:0;
 }
 
 .select-box {
   height: 30px;
   padding-left: 8px;
+  outline:0;
 }
 
 .input-tag {
   padding: 0 4px;
+  outline:0;
 }
 
 .category-tag {
@@ -330,6 +368,24 @@ header {
 }
 
 .post-destroy {
+  text-decoration: none;
+  color: #333333;
+  display: inline-block;
+}
+
+.likes {
+  text-decoration: none;
+}
+
+.unlike-btn {
+  color: red;
+}
+
+.like-btn {
+  color: #cccccc;
+}
+
+.to-session {
   text-decoration: none;
   color: #333333;
   display: inline-block;

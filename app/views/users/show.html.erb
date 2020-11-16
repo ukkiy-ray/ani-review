@@ -4,7 +4,13 @@
   </div>
   <div class="main-wrapper">
     <div class="main-container">
-      <div class="main-title"><%= "#{@user.nickname}さんの投稿" %></div>
+      <div class="main-title">
+        <% if user_signed_in? && @user.id == current_user.id %>
+          マイページ
+        <% else %>
+          <%= "#{@user.nickname}さんの投稿" %>
+        <% end %>
+      </div>
       <div class="post-wrap">
         <div class="count"><%= "#{@posts.count}件の記事があります" %></div>
         <% if @posts.present? %>
@@ -14,10 +20,10 @@
                 <%= link_to "#{post.title}", post_path(post.id), class: "link-to-show" %>
               </div>
               <div class="genre">
+              <div class="upper-content">
                 <div class="category">
                   <%= post.category.name %>
                 </div>
-
                 <ul class="tag">
                   <li class="tag-list">
                     <%post.tags.each do |tag| %>
@@ -26,6 +32,21 @@
                   </li>
                 </ul>
               </div>
+              <div class="like-count">
+                <% if user_signed_in? %>
+                  <% if post.likes.find_by(user_id: current_user.id).present? %>
+                    <span class="fa fa-heart unlike-btn"></span>
+                    <%= "#{post.likes.count}" %>
+                  <% else %>
+                    <span class="fa fa-heart like-btn"></span>
+                    <%= "#{post.likes.count}" %>
+                  <% end %>
+                <% else %>
+                  <span class="fa fa-heart unlike-btn"></span>
+                  <%= "#{post.likes.count}" %>
+                <% end %>
+              </div>
+            </div>
             </div>
           <% end %>
         <% else %>

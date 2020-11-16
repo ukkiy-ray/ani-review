@@ -20,6 +20,10 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @tags = @post.tags
+    @likes = Like.where(post_id: @post.id)
+    if user_signed_in?
+      @like = Like.find_by(user_id: current_user.id, post_id: @post.id)
+    end
   end
 
   def destroy
@@ -38,6 +42,10 @@ class PostsController < ApplicationController
 
   def squeeze
     @posts = Post.where(category_id: params[:category_id]).order(created_at: :desc)
+  end
+
+  def post_search
+    @posts = Post.search(params[:keyword])
   end
 
   private

@@ -17,6 +17,9 @@
           </div>
           <div class="bottom-contents">
             <div class="link-wrap">
+              <% unless user_signed_in? %>
+                <%= link_to "いいねするにはログインしてください。", new_user_session_path, class: "to-session" %>
+              <% end %>
               <%= link_to "トップページに戻る", root_path, class: "link_to_top" %>
               <% if user_signed_in? && @post.user_id == current_user.id %>
                 <%#= link_to "編集する", "#", class: "link_to_edit" %>
@@ -24,6 +27,24 @@
               <% end %>
             </div>
             <ul>
+              <li>
+                <% if user_signed_in? %>
+                  <% if @like.present? %>
+                    <%= link_to(post_like_path(@post.id), method: :delete, class: "likes") do %>
+                      <span class="fa fa-heart unlike-btn"></span>
+                    <% end %>
+                    <%= "#{@likes.count}件のいいね" %>
+                  <% else %>
+                    <%= link_to(post_likes_path(@post.id), method: :post, class: "likes") do %>
+                      <span class="fa fa-heart like-btn"></span>
+                    <% end %>
+                    <%= "#{@likes.count}件のいいね" %>
+                  <% end %>
+                <% else %>
+                  <span class="fa fa-heart like-btn"></span>
+                  <%= "#{@likes.count}件のいいね" %>
+                <% end %>
+              </li>
               <li><%= @post.category.name %></li>
               <li class="tag-list">
                 <% @tags.each do |tag| %>
