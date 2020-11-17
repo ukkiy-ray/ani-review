@@ -5,28 +5,19 @@
   <div class="main-wrapper">
     <div class="main-container">
       <div class="main-title">
-        <% if user_signed_in? && @user.id == current_user.id %>
-          マイページ
-        <% else %>
-          <%= "#{@user.nickname}さんの投稿" %>
-        <% end %>
+        いいねした投稿一覧
       </div>
       <div class="post-wrap">
         <div class="count">
-          <% if user_signed_in? && @user.id == current_user.id %>
-            <%= "現在、あなたは#{@posts.count}件投稿しています。" %>
-            <%= link_to(likes_user_path(@user.id), method: :get, class: "my-favorite") do %>
-              <span class="fa fa-heart favorite-btn"></span><span class="favorite">My favorite review</span>
-            <% end %>
-
-          <% else %>
-            <%= "#{@posts.count}件の記事があります。" %>
+          <% if @likes.present? %>
+            <%= "#{@likes.count}件の記事をいいねしています。" %>
           <% end %>
         </div>
-        <% if @posts.present? %>
-          <% @posts.each do |post| %>
+        <% if @likes.present? %>
+          <% @likes.each do |like| %>
             <div class="post">
               <div class="title">
+                <% post = Post.find_by(id: like.post_id) %>
                 <%= link_to "#{post.title}", post_path(post.id), class: "link-to-show" %>
               </div>
               <div class="genre">
@@ -64,7 +55,7 @@
             </div>
           <% end %>
         <% else %>
-          <div class="nothing">記事が存在しません。</div>
+          <div class="nothing">いいねした投稿はありません。</div>
         <% end %>
         <%= link_to "トップページに戻る", root_path, class: "link_to_root" %>
       </div>

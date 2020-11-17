@@ -328,6 +328,8 @@ header {
 .count {
   color: #333333;
   margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .post-user {
@@ -389,6 +391,22 @@ header {
   text-decoration: none;
   color: #333333;
   display: inline-block;
+}
+
+.my-favorite {
+  text-decoration: none;
+  padding: 0 4px;
+  border-bottom: 1px solid #ffddff;
+}
+
+.favorite-btn {
+  color: red;
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.favorite {
+  color: #333333;
 }
 
 /* 検索結果ページ */
