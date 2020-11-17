@@ -9,7 +9,7 @@ class Post < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      Post.where(['title LIKE(?) or content LIKE(?)', "%#{search}%", "%#{search}%"])
+      Post.joins(:tags).where(['title LIKE(?) or content LIKE(?) or name LIKE(?)', "%#{search}%", "%#{search}%", "%#{search}%"])
     else
       Post.all.order(created_at: :desc)
     end
