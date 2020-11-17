@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
+
   def index
     @posts = Post.all.order(created_at: :desc)
   end
@@ -18,7 +21,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @tags = @post.tags
     @likes = Like.where(post_id: @post.id)
     if user_signed_in?
@@ -27,7 +29,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     if user_signed_in? && current_user.id == @post.user_id
       @post.destroy
     end
@@ -54,4 +55,7 @@ class PostsController < ApplicationController
     params.require(:posts_tag).permit(:title, :content, :category_id, :name).merge(user_id: current_user.id)
   end
 
+  def set_post
+    @post = Post.find(params[:id])
+  end
 end
