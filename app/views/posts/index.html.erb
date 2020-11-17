@@ -35,10 +35,14 @@
               <div class="like-count">
                 <% if user_signed_in? %>
                   <% if post.likes.find_by(user_id: current_user.id).present? %>
-                    <span class="fa fa-heart unlike-btn"></span>
+                    <%= link_to(post_like_path(post.id, post.likes.find_by(user_id: current_user.id, post_id: post.id).id), method: :delete, class: "likes") do %>
+                      <span class="fa fa-heart unlike-btn"></span>
+                    <% end %>
                     <%= "#{post.likes.count}" %>
                   <% else %>
-                    <span class="fa fa-heart like-btn"></span>
+                    <%= link_to(post_likes_path(post.id), method: :post, class: "likes") do %>
+                      <span class="fa fa-heart like-btn"></span>
+                    <% end %>
                     <%= "#{post.likes.count}" %>
                   <% end %>
                 <% else %>
