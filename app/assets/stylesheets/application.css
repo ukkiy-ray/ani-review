@@ -22,6 +22,19 @@
   width: 10px;
 }
 
+.bread {
+  margin: 100px 80px;
+  color: #333333;
+  position: fixed;
+  z-index: 10;
+  font-size: 16px;
+}
+
+.bread a {
+  text-decoration: none;
+  color: #333333;
+}
+
  /* ヘッダー======================= */
 
 header {
@@ -34,6 +47,7 @@ header {
 }
 
 .header-contents {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,6 +109,11 @@ header {
 
 /* =========== ここまでヘッダー ============ */
 
+.side-contents {
+  height: 100%;
+  width: 100%;
+}
+
 .side-title {
   margin: 150px 0 20px 0;
   font-size: 28px;
@@ -119,6 +138,25 @@ header {
   outline:0;
 }
 
+.git-hub {
+  text-decoration: none;
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+}
+
+.git-btn {
+  text-align: center;
+  margin: 120px 3px 0 40px;
+  font-size: 25px;
+  color: aliceblue;
+}
+
+.side-text {
+  color: aliceblue;
+  font-size: 8px;
+}
+
 
 /* ================ ここからトップページ ====================*/
 .main {
@@ -131,6 +169,7 @@ header {
   height: 100%;
   width: 15%;
   background-color: #333333;
+  overflow: auto;
 }
 
 .main-wrapper {

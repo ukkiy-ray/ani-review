@@ -3,6 +3,10 @@
     <%= render "posts/side_bar" %>
   </div>
   <div class="main-wrapper">
+    <div class="bread">
+      <% breadcrumb :user, @user %>
+      <%= breadcrumbs separator: " &rsaquo; " %>
+    </div>
     <div class="main-container">
       <div class="main-title">
         <% if user_signed_in? && @user.id == current_user.id %>
@@ -16,7 +20,7 @@
           <% if user_signed_in? && @user.id == current_user.id %>
             <%= "現在、あなたは#{@posts.count}件投稿しています。" %>
             <%= link_to(likes_user_path(@user.id), method: :get, class: "my-favorite") do %>
-              <span class="fa fa-heart favorite-btn"></span><span class="favorite">My favorite review</span>
+              <span class="fa fa-heart favorite-btn"></span><span class="favorite">いいねした投稿はこちら</span>
             <% end %>
 
           <% else %>

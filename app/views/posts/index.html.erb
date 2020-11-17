@@ -3,16 +3,19 @@
     <%= render "side_bar" %>
   </div>
   <div class="main-wrapper">
+    <div class="bread">
+      <% breadcrumb :root %>
+      <%= breadcrumbs separator: " &rsaquo; " %>
+    </div>
     <div class="main-container">
       <div class="main-title">- 投稿一覧 -</div>
-      
       <div class="post-wrap">
           <% if user_signed_in? %>
             <%= link_to "New Post", new_post_path, class:"post-btn"%>
           <% else %>
             <div class="note">記事を投稿するには<%= link_to "ログイン", new_user_session_path, class: "sign" %>するか、<%= link_to "会員登録", new_user_registration_path, class: "sign" %>をしてください。</div>
           <% end %>
-          <div class="count"><%= "【合計#{@posts.count}件の記事】検索するか、カテゴリーを選択すると素早く見つかります。" %></div>
+          <div class="count"><%= "【合計#{@posts.count}件の記事】検索、またはカテゴリーを選択すると素早く見つかります。" %></div>
         <% @posts.each do |post| %>
           <div class="post">
             <div class="title">
