@@ -18,6 +18,10 @@
   box-sizing: border-box;
  }
 
+ ::-webkit-scrollbar {
+  width: 10px;
+}
+
  /* ヘッダー======================= */
 
 header {
@@ -174,6 +178,11 @@ header {
 .post-wrap {
   margin: 20px auto;
   width: 90%;
+  overflow-y: scroll;
+}
+
+.post-wrap::-webkit-scrollbar {
+  display:none;
 }
 
 .post {
@@ -420,3 +429,5 @@ header {
   display: block;
   margin-top: 10px;
 }
+
+/* ======== 追記情報 ======== */
