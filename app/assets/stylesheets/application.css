@@ -18,8 +18,12 @@
   box-sizing: border-box;
  }
 
- ::-webkit-scrollbar {
-  width: 10px;
+html, body{
+  overflow: hidden;
+}
+
+a, a:visited, a:focus, a:hover {
+  text-decoration: none;
 }
 
 .bread {
@@ -38,7 +42,7 @@
  /* ヘッダー======================= */
 
 header {
-  background-color: #999999;    /* rgbは 0, 0, 68と迷い中 */
+  background-color: #999999;
   height: 80px;
   width: 100%;
   position: absolute;
@@ -169,7 +173,6 @@ header {
   height: 100%;
   width: 15%;
   background-color: #333333;
-  overflow: auto;
 }
 
 .main-wrapper {
@@ -188,7 +191,6 @@ header {
   width: 75%;
   margin: 0 auto;
   padding-top: 120px;
-  overflow: auto;
 }
 
 .main-title {
@@ -469,4 +471,18 @@ header {
   margin-top: 10px;
 }
 
-/* ======== 追記情報 ======== */
+/* ======== ページネーション ======== */
+
+.pagination>li>a {
+  border: none;
+  color: #696969;
+}
+
+.pagination>.active>a {
+  background: #93c9ff;
+  border-radius: 15px;
+}
+
+.pagination>li>a:hover {
+  border-radius: 15px;
+}

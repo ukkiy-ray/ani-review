@@ -3,11 +3,13 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:likes]
 
   def show
-    @posts = @user.posts.order(created_at: :desc)
+    @post_all = @user.posts.all
+    @posts = @user.posts.order(created_at: :desc).page(params[:page]).per(7)
   end
 
   def likes
-    @likes = Like.where(user_id: @user.id).order(created_at: :desc)
+    @post_all = Like.where(user_id: @user.id).all
+    @likes = Like.where(user_id: @user.id).order(created_at: :desc).page(params[:page]).per(7)
   end
 
   private

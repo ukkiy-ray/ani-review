@@ -12,7 +12,7 @@
       
       <div class="post-wrap">
         <% if @posts.present? %>
-          <div class="count"><%= "#{@posts.count}件の記事が見つかりました。" %></div>
+          <div class="count"><%= "#{@post_all.count}件の記事が見つかりました。" %></div>
           <% @posts.each do |post| %>
             <div class="post">
               <div class="title">
@@ -58,6 +58,7 @@
         <% end %>
         <%= link_to "トップページに戻る", root_path, class: "link_to_root" %>
       </div>
+      <%= paginate @posts %>
     </div>
   </div>
 </div>

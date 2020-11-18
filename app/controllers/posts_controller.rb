@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :destroy]
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @post_all = Post.all
+    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(7)
   end
 
   def new
@@ -42,11 +43,13 @@ class PostsController < ApplicationController
   end
 
   def squeeze
-    @posts = Post.where(category_id: params[:category_id]).order(created_at: :desc)
+    @post_all = Post.where(category_id: params[:category_id])
+    @posts = Post.where(category_id: params[:category_id]).order(created_at: :desc).page(params[:page]).per(7)
   end
 
   def post_search
-    @posts = Post.search(params[:keyword])
+    @post_all = Post.search(params[:keyword])
+    @posts = Post.search(params[:keyword]).page(params[:page]).per(7)
   end
 
   private

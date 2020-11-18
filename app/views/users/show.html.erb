@@ -24,7 +24,7 @@
             <% end %>
 
           <% else %>
-            <%= "#{@posts.count}件の記事があります。" %>
+            <%= "#{@post_all.count}件の記事があります。" %>
           <% end %>
         </div>
         <% if @posts.present? %>
@@ -72,6 +72,7 @@
         <% end %>
         <%= link_to "トップページに戻る", root_path, class: "link_to_root" %>
       </div>
+      <%= paginate @posts %>
     </div>
   </div>
 </div>

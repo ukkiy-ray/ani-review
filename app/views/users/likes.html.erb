@@ -14,7 +14,7 @@
       <div class="post-wrap">
         <div class="count">
           <% if @likes.present? %>
-            <%= "#{@likes.count}件の記事をいいねしています。" %>
+            <%= "#{@post_all.count}件の記事をいいねしています。" %>
           <% end %>
         </div>
         <% if @likes.present? %>
@@ -63,6 +63,7 @@
         <% end %>
         <%= link_to "トップページに戻る", root_path, class: "link_to_root" %>
       </div>
+      <%= paginate @likes %>
     </div>
   </div>
 </div>
