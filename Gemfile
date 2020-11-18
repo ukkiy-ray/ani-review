@@ -62,3 +62,7 @@ gem "pry-rails"
 gem "gretel"
 
 gem 'kaminari'
+
+group :production do
+  gem 'rails_12factor'
+end
