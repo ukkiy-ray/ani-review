@@ -474,6 +474,7 @@ header {
 /* ======== ページネーション ======== */
 
 .pagination>li>a {
+  background: none;
   border: none;
   color: #696969;
 }
