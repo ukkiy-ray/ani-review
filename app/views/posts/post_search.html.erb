@@ -13,46 +13,7 @@
       <div class="post-wrap">
         <% if @posts.present? %>
           <div class="count"><%= "#{@post_all.count}件の記事が見つかりました。" %></div>
-          <% @posts.each do |post| %>
-            <div class="post">
-              <div class="title">
-                <%= link_to "#{post.title}", post_path(post.id), class: "link-to-show" %>
-              </div>
-              <div class="genre">
-              <div class="upper-content">
-                <div class="category">
-                  <%= post.category.name %>
-                </div>
-
-                <ul class="tag">
-                  <li class="tag-list">
-                    <%post.tags.each do |tag| %>
-                      #<%=tag.name%>
-                    <%end%>
-                  </li>
-                </ul>
-              </div>
-              <div class="like-count">
-                <% if user_signed_in? %>
-                  <% if post.likes.find_by(user_id: current_user.id).present? %>
-                    <%= link_to(post_like_path(post.id, post.likes.find_by(user_id: current_user.id, post_id: post.id).id), method: :delete, class: "likes") do %>
-                      <span class="fa fa-heart unlike-btn"></span>
-                    <% end %>
-                    <%= "#{post.likes.count}" %>
-                  <% else %>
-                    <%= link_to(post_likes_path(post.id), method: :post, class: "likes") do %>
-                      <span class="fa fa-heart like-btn"></span>
-                    <% end %>
-                    <%= "#{post.likes.count}" %>
-                  <% end %>
-                <% else %>
-                  <span class="fa fa-heart unlike-btn"></span>
-                  <%= "#{post.likes.count}" %>
-                <% end %>
-              </div>
-            </div>
-            </div>
-          <% end %>
+          <%= render partial: "post", locals: { posts: @posts } %>
         <% else %>
           <div class="nothing">該当する記事が見つかりませんでした。</div>
         <% end %>
