@@ -8,14 +8,21 @@
 
       <h2 class="form-title">Log in</h2>
 
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class='login-flash-message'>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+      </div>
+
+      
+      <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+        <%= render "users/shared/error_messages", resource: resource %>
         <div class="field">
-          <%= f.label :email, class: "form-content" %><br />
+          <%= f.label "email", class: "form-content" %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
         </div>
 
         <div class="field">
-          <%= f.label :password, class: "form-content" %><br />
+          <%= f.label "password", class: "form-content" %><br />
           <%= f.password_field :password, autocomplete: "current-password", class: "input" %>
         </div>
         

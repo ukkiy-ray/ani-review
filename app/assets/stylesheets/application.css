@@ -39,6 +39,12 @@ a, a:visited, a:focus, a:hover {
   color: #333333;
 }
 
+.errors {
+  display: flex;
+  justify-content: space-around;
+  color: #333333;
+}
+
  /* ヘッダー======================= */
 
 header {

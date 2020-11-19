@@ -6,6 +6,15 @@
     <div class="main-container">
       <div class="post-title">New Post</div>
       <%= form_with model: @post, url: posts_path, class:'form-wrap', local: true do |f| %>
+
+        <% if @post.errors.any? %>
+          <ul class="errors">
+            <% @post.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        <% end %>
+
         <div class='post-form'>
           <div class="post-field">
             <%= f.label :title,  "タイトル" %><br />

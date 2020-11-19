@@ -9,9 +9,7 @@ class PostsTag
     validates :name
   end
 
-  with_options numericality: { other_than: 1 } do
-    validates :category_id
-  end
+  validates :category_id, numericality: { other_than: 1, message: "を選択してください" }
 
   def save
     post = Post.create(title: title, content: content, category_id: category_id, user_id: user_id)
