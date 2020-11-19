@@ -32,22 +32,9 @@
             </div>
             <ul>
               <li>
-                <% if user_signed_in? %>
-                  <% if @like.present? %>
-                    <%= link_to(post_like_path(@post.id), method: :delete, class: "likes") do %>
-                      <span class="fa fa-heart unlike-btn"></span>
-                    <% end %>
-                    <%= "#{@likes.count}件のいいね" %>
-                  <% else %>
-                    <%= link_to(post_likes_path(@post.id), method: :post, class: "likes") do %>
-                      <span class="fa fa-heart like-btn"></span>
-                    <% end %>
-                    <%= "#{@likes.count}件のいいね" %>
-                  <% end %>
-                <% else %>
-                  <span class="fa fa-heart like-btn"></span>
-                  <%= "#{@likes.count}件のいいね" %>
-                <% end %>
+                <div id="likes_buttons_<%= @post.id %>", class="like-count">
+                  <%= render partial: 'likes/like', locals: { post: @post} %>
+                </div>
               </li>
               <li><%= @post.category.name %></li>
               <li class="tag-list">

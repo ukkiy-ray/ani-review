@@ -5,17 +5,17 @@ class LikesController < ApplicationController
 
   def create
     if user_signed_in?
-      @like = Like.new(user_id: current_user.id, post_id: @post.id)
+      @like = current_user.likes.build(post_id: params[:post_id])
       @like.save
-      redirect_to post_path(@post.id)
+      
     end
   end
 
   def destroy
     if user_signed_in?
-      @like = Like.find_by(user_id: current_user.id, post_id: @post.id)
+      @like = Like.find_by(post_id: params[:post_id], user_id: current_user.id)
       @like.destroy
-      redirect_to post_path(@post.id)
+      
     end
   end
 
