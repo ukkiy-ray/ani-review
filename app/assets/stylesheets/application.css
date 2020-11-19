@@ -89,32 +89,73 @@ header {
 }
 
 .header-right {
-  margin-right: 50px;
+  margin-right: 30px;
   line-height: 80px;
   font-size: 20px;
-  font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'Noto Serif JP', serif;
 }
 
 .sign-in {
   margin-right: 16px;
+  font-size: 20px;
   text-decoration: none;
   color: black;
+  line-height: 80px;
+  display: inline-block;
+  transition: all 1s;
+  padding: 0 12px;
+  border: none;
+}
+
+.sign-in:hover {
+  background-color: aqua;
 }
 
 .hello {
-  margin-right: 16px;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 80px;
+  transition: all 1s;
+  padding: 0 12px;
   text-decoration: none;
   color: black;
+  border: none;
+}
+
+.hello:hover {
+  background-color: #333333;
+  color: aliceblue;
 }
 
 .sign-up {
+  font-size: 20px;
+  transition: all 1s;
+  display: inline-block;
+  line-height: 80px;
   text-decoration: none;
   color: black;
+  padding:  0 12px;
+  border: none;
+}
+
+.sign-up:hover {
+  background-color: #333333;
+  color: aliceblue;
 }
 
 .sign-out {
+  font-size: 20px;
+  transition: all 1s;
+  display: inline-block;
+  line-height: 80px;
   text-decoration: none;
   color: black;
+  padding: 0 12px;
+  border: none;
+}
+
+.sign-out:hover {
+  background-color: aqua;
 }
 
 /* =========== ここまでヘッダー ============ */
@@ -134,18 +175,35 @@ header {
 
 .search-form {
   text-align: center;
-  margin-top: 10px;
+  
+  font-size: 0;
 }
 
 .post-squeeze {
-  margin-top: 15px;
+  /*margin-top: 15px;*/
+  height: 38px;
+  line-height: 38px;
+  transition: all 0.2s;
+  font-size: 0;
+}
+
+.post-squeeze:hover {
+  background-color: #eeeeee;
 }
 
 .search-btn {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
   border: none;
   background: none;
   color: aliceblue;
+  transition: all 0.2s;
   outline:0;
+}
+
+.search-btn:hover {
+  color: #ff6600;
 }
 
 .git-hub {
@@ -208,12 +266,16 @@ header {
 
 .post-btn {
   text-decoration: none;
-  font-family: 'Kosugi Maru', sans-serif;
   display: inline-block;
   padding: 4px;
+  margin-bottom: 8px;
+}
+
+.pen {
   color: #ff6600;
-  border: 1px solid #333333;
-  margin-bottom: 10px;
+  font-size: 24px;
+  padding-bottom: 4px;
+  border-bottom: 0.8px solid #c0c0c0;
 }
 
 .note {
