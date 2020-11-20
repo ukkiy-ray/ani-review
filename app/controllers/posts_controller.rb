@@ -44,6 +44,7 @@ class PostsController < ApplicationController
 
   def squeeze
     @post_all = Post.where(category_id: params[:category_id])
+    @post = Post.find_by(category_id: params[:category_id])
     @posts = Post.where(category_id: params[:category_id]).order(created_at: :desc).page(params[:page]).per(7)
   end
 

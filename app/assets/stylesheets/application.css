@@ -40,9 +40,8 @@ a, a:visited, a:focus, a:hover {
 }
 
 .errors {
-  display: flex;
-  justify-content: space-around;
-  color: #333333;
+  text-align: center;
+  color: red;
 }
 
  /* ヘッダー======================= */
@@ -183,12 +182,12 @@ header {
   /*margin-top: 15px;*/
   height: 38px;
   line-height: 38px;
-  transition: all 0.2s;
+  transition: all 0.5s;
   font-size: 0;
 }
 
 .post-squeeze:hover {
-  background-color: #eeeeee;
+  background-color: rgba(238, 238, 238, 1);
 }
 
 .search-btn {
@@ -198,12 +197,53 @@ header {
   border: none;
   background: none;
   color: aliceblue;
-  transition: all 0.2s;
+  transition: all 0.5s;
   outline:0;
 }
 
 .search-btn:hover {
+  
+  font-size: 18px;
+}
+
+.blue:hover {
+  color: blue;
+}
+
+.pink:hover{
+  color: #FF69A3;
+}
+
+.orange:hover {
   color: #ff6600;
+}
+
+.red:hover {
+  color: red;
+}
+
+.lightblue:hover {
+  color: #1E90FF;
+}
+
+.purple:hover {
+  color: purple;
+}
+
+.green:hover {
+  color: #006400;
+}
+
+.lemon:hover {
+  color: #7B68EE;
+}
+
+.short:hover {
+  color: #ff6600;
+}
+
+.other:hover {
+  color: #333333;
 }
 
 .git-hub {
@@ -276,6 +316,12 @@ header {
   font-size: 24px;
   padding-bottom: 4px;
   border-bottom: 0.8px solid #c0c0c0;
+  transition: all 0.4s;
+}
+
+.pen:hover {
+  border-bottom: 0.8px solid #c0c0c0;
+  font-size: 26px;
 }
 
 .note {
@@ -392,7 +438,9 @@ header {
 
 .post-input {
   width: 100%;
-  padding: 0 4px;
+  padding: 4px;
+  resize: none;
+  line-height: 1.2;
   outline:0;
 }
 
@@ -427,6 +475,10 @@ header {
 
 .submit-btn {
   font-size: 18px;
+  transition: all 0.5s;
+  border: none;
+  background-color: #dddddd;
+  box-shadow: 2px 2px #333333;
   font-family: 'Kosugi Maru', sans-serif;
   display: inline-block;
   width: 180px;
@@ -463,10 +515,13 @@ header {
 .content {
   width: 100%;
   height: 60vh;
+  white-space: pre-line;
+  display: block;
+  font-size: 18px;
   margin-top: 20px;
   border: 0.5px solid #c0c0c0;
   border-radius: 16px;
-  padding: 4px;
+  padding: 0 14px;
 }
 
 .bottom-contents {
@@ -499,10 +554,20 @@ header {
 
 .unlike-btn {
   color: red;
+  transition: all 0.3s;
+}
+
+.unlike-btn:hover {
+  font-size: 20px;
 }
 
 .like-btn {
   color: #cccccc;
+  transition: all 0.3s;
+}
+
+.like-btn:hover {
+  font-size: 20px;
 }
 
 .to-session {

@@ -12,7 +12,9 @@
       
       <div class="post-wrap">
         <% if @posts.present? %>
-          <div class="count"><%= "#{@post_all.count}件の記事が見つかりました。" %></div>
+          <div class="count">
+            <%= "【#{@post.category.name}】に関連する記事が#{@post_all.count}件見つかりました。" %>
+          </div>
           <%= render partial: "post", locals: { posts: @posts } %>
         <% else %>
           <div class="nothing">記事が存在しません。</div>
