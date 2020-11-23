@@ -163,6 +163,10 @@ a, a:visited, a:focus, a:hover {
   display: flex;
 }
 
+.category {
+  cursor: default;
+}
+
 .like-count {
   margin-top: 2px;
   font-size: 16px;
@@ -175,6 +179,7 @@ a, a:visited, a:focus, a:hover {
 }
 
 .tag-list {
+  cursor: default;
   color: #0066ff;
 }
 

@@ -9,7 +9,11 @@
     </div>
     <div class="main-container">
       <div class="main-title">
-        いいねした投稿一覧
+        <% if user_signed_in? && @user.id == current_user.id %>
+          いいねした投稿一覧
+        <% else %>
+          <%= "#{@user.nickname}さんのいいね一覧" %>
+        <% end %>
       </div>
       <div class="post-wrap">
         <div class="count">
