@@ -43,229 +43,6 @@ a, a:visited, a:focus, a:hover {
   text-align: center;
   color: red;
 }
-
- /* ヘッダー======================= */
-
-header {
-  background-color: #999999;
-  height: 80px;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.header-contents {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-left {
-  margin-left: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.post-search-form {
-  margin-left: 25px;
-  width: 400px;
-}
-
-.search-input {
-  width: 60%;
-  height: 28px;
-  padding:0 10px; 
-  border: none;
-  border-radius:25px;
-  outline:0;
-  background: #fafafa;
-}
-
-.search-input::placeholder {
-  font-size: 12px;
-}
-
-.header-right {
-  margin-right: 30px;
-  line-height: 80px;
-  font-size: 20px;
-  font-family: 'Noto Serif JP', serif;
-}
-
-.sign-in {
-  margin-right: 16px;
-  font-size: 20px;
-  text-decoration: none;
-  color: black;
-  line-height: 80px;
-  display: inline-block;
-  transition: all 1s;
-  padding: 0 12px;
-  border: none;
-}
-
-.sign-in:hover {
-  background-color: aqua;
-}
-
-.hello {
-  font-size: 20px;
-  display: inline-block;
-  line-height: 80px;
-  transition: all 1s;
-  padding: 0 12px;
-  text-decoration: none;
-  color: black;
-  border: none;
-}
-
-.hello:hover {
-  background-color: #333333;
-  color: aliceblue;
-}
-
-.sign-up {
-  font-size: 20px;
-  transition: all 1s;
-  display: inline-block;
-  line-height: 80px;
-  text-decoration: none;
-  color: black;
-  padding:  0 12px;
-  border: none;
-}
-
-.sign-up:hover {
-  background-color: #333333;
-  color: aliceblue;
-}
-
-.sign-out {
-  font-size: 20px;
-  transition: all 1s;
-  display: inline-block;
-  line-height: 80px;
-  text-decoration: none;
-  color: black;
-  padding: 0 12px;
-  border: none;
-}
-
-.sign-out:hover {
-  background-color: aqua;
-}
-
-/* =========== ここまでヘッダー ============ */
-
-.side-contents {
-  height: 100%;
-  width: 100%;
-}
-
-.side-title {
-  margin: 150px 0 20px 0;
-  font-size: 28px;
-  font-family: 'Roboto Condensed', sans-serif;
-  text-align: center;
-  color: #fafafa;
-}
-
-.search-form {
-  text-align: center;
-  
-  font-size: 0;
-}
-
-.post-squeeze {
-  /*margin-top: 15px;*/
-  height: 38px;
-  line-height: 38px;
-  transition: all 0.5s;
-  font-size: 0;
-}
-
-.post-squeeze:hover {
-  background-color: rgba(238, 238, 238, 1);
-}
-
-.search-btn {
-  display: inline-block;
-  width: 100%;
-  font-size: 14px;
-  border: none;
-  background: none;
-  color: aliceblue;
-  transition: all 0.5s;
-  outline:0;
-}
-
-.search-btn:hover {
-  
-  font-size: 18px;
-}
-
-.blue:hover {
-  color: blue;
-}
-
-.pink:hover{
-  color: #FF69A3;
-}
-
-.orange:hover {
-  color: #ff6600;
-}
-
-.red:hover {
-  color: red;
-}
-
-.lightblue:hover {
-  color: #1E90FF;
-}
-
-.purple:hover {
-  color: purple;
-}
-
-.green:hover {
-  color: #006400;
-}
-
-.lemon:hover {
-  color: #7B68EE;
-}
-
-.short:hover {
-  color: #ff6600;
-}
-
-.other:hover {
-  color: #333333;
-}
-
-.git-hub {
-  text-decoration: none;
-  margin-top: 30px;
-  display: inline-block;
-  width: 100%;
-}
-
-.git-btn {
-  text-align: center;
-  margin: 120px 3px 0 40px;
-  font-size: 25px;
-  color: aliceblue;
-}
-
-.side-text {
-  color: aliceblue;
-  font-size: 8px;
-}
-
-
 /* ================ ここからトップページ ====================*/
 .main {
   height: 100vh;
@@ -292,9 +69,9 @@ header {
 
 .main-container {
   height: 100%;
-  width: 75%;
+  width: 70%;
   margin: 0 auto;
-  padding-top: 120px;
+  padding-top: 110px;
 }
 
 .main-title {
@@ -336,6 +113,12 @@ header {
   overflow-y: scroll;
 }
 
+.show-wrap {
+  margin: 10px auto;
+  width: 90%;
+  overflow-y: scroll;
+}
+
 .post-wrap::-webkit-scrollbar {
   display:none;
 }
@@ -350,13 +133,26 @@ header {
 }
 
 .title {
-  line-height: 60px;
-  font-size: 18px;
+  padding: 6px 0 0 2px;
 }
 
 .link-to-show {
   text-decoration: none;
   color: black;
+  font-size: 18px;
+  display: block;
+}
+
+.link-to-user {
+  display: inline-block;
+  text-decoration: none;
+  color: #696969;
+  font-size: 14px;
+  transition: all 0.4s;
+}
+
+.link-to-user:hover {
+  color: #6336f5;
 }
 
 .genre {
@@ -382,41 +178,7 @@ header {
   color: #0066ff;
 }
 
-/* ユーザー登録ページ */
 
-.user-form {
-  height: 100vh;
-  width: 100%;
-  padding: 200px;
-  text-align: center;
-}
-
-.form-title {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.form-content {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 18px;
-}
-
-.field {
-  margin-top: 10px;
-}
-
-.input {
-  width: 40%;
-  padding: 0 4px;
-  outline:0;
-}
-
-.actions {
-  margin-top: 20px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
-}
 
 /*==================== 新規投稿ページ ==============*/
 
@@ -477,7 +239,7 @@ header {
   font-size: 18px;
   transition: all 0.5s;
   border: none;
-  background-color: #dddddd;
+  background-color: aliceblue;
   box-shadow: 2px 2px #333333;
   font-family: 'Kosugi Maru', sans-serif;
   display: inline-block;
@@ -590,6 +352,11 @@ header {
 
 .favorite {
   color: #333333;
+  transition: all 0.4s;
+}
+
+.favorite:hover {
+  font-size: 16px;
 }
 
 /* 検索結果ページ */

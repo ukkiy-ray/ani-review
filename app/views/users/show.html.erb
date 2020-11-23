@@ -15,7 +15,22 @@
           <%= "#{@user.nickname}さんの投稿" %>
         <% end %>
       </div>
-      <div class="post-wrap">
+      <div class="show-wrap">
+
+        <div class="follow-contents">
+          <div class="follow-content">
+            <div class="follower">
+                <%= link_to "フォロワー#{ @user.followers.count }人", followers_user_path(@user.id), id: "follower-count_#{ @user.id }", class: "follower-count" %>
+            </div>
+            <div class="follow">
+                <%= link_to "フォロー#{@user.following.count}人", following_user_path(@user.id), id: "following-count_#{ @user.id }", class: "following-count" %>
+            </div>
+          </div>
+          <div>
+              <%= render "follow_form" %>
+          </div>
+        </div>
+
         <div class="count">
           <% if user_signed_in? && @user.id == current_user.id %>
             <%= "現在、あなたは#{@posts.count}件投稿しています。" %>

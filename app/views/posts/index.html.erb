@@ -21,8 +21,9 @@
           <% end %>
           <div class="count"><%= "【合計#{@post_all.count}件の記事】検索、またはカテゴリーを選択すると素早く見つかります。" %></div>
           <%= render partial: "post", locals: { posts: @posts } %>
+          <%= paginate @posts %>
       </div>
-      <%= paginate @posts %>
+      
     </div>
   </div>
 </div>

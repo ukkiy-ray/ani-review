@@ -1,0 +1,45 @@
+<div class="main">
+  <div class="side-bar">
+    <%= render "posts/side_bar" %>
+  </div>
+  <div class="main-wrapper">
+    <div class="bread">
+      <% breadcrumb :following_user, @user %>
+      <%= breadcrumbs separator: " &rsaquo; " %>
+    </div>
+    <div class="follow-container">
+      <div class="main-title">- フォローしているユーザー一覧 -</div>
+      <div class="user-wrap">
+        <% if user_signed_in? && @user.id == current_user.id %>
+          <% if @users.present? %>
+            <% @users.each do |user| %>
+              <div class="users">
+                <div class="user-name">
+                  <%= link_to "#{user.nickname}", user_path(user.id), class: "following-user-link" %>
+                </div>
+                <%= "#{user.posts.count}件の投稿" %>
+              </div>
+            <% end %>
+          <% else %>
+            <div class="no-follow">フォローしているユーザーはいません。</div>
+          <% end %>
+        <% else %>
+          <% if @users.present? %>
+            <% @users.each do |user| %>
+              <div class="users">
+                <div class="user-name">
+                  <%= link_to "#{user.nickname}", user_path(user.id), class: "following-user-link" %>
+                </div>
+                <%= "#{user.posts.count}件の投稿" %>
+              </div>
+            <% end %>
+          <% else %>
+            <div class="no-follow"><%= "#{@user.nickname}さんがフォローしているユーザーはいません。" %></div>
+          <% end %>
+        <% end %>
+        <%= paginate @users %>
+        <%= link_to "トップページに戻る", root_path, class: "link_to_root" %>
+      </div>
+    </div>
+  </div>
+</div>

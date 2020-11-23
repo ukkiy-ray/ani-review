@@ -1,0 +1,104 @@
+.side-contents {
+  height: 100%;
+  width: 100%;
+}
+
+.side-title {
+  margin: 150px 0 20px 0;
+  font-size: 28px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  color: #fafafa;
+}
+
+.search-form {
+  text-align: center;
+  
+  font-size: 0;
+}
+
+.post-squeeze {
+  /*margin-top: 15px;*/
+  height: 38px;
+  line-height: 38px;
+  transition: all 0.5s;
+  font-size: 0;
+}
+
+.post-squeeze:hover {
+  background-color: rgba(238, 238, 238, 1);
+}
+
+.search-btn {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  border: none;
+  background: none;
+  color: aliceblue;
+  transition: all 0.5s;
+  outline:0;
+}
+
+.search-btn:hover {
+  font-size: 18px;
+}
+
+.blue:hover {
+  color: blue;
+}
+
+.pink:hover{
+  color: #FF69A3;
+}
+
+.orange:hover {
+  color: #ff6600;
+}
+
+.red:hover {
+  color: red;
+}
+
+.lightblue:hover {
+  color: #1E90FF;
+}
+
+.purple:hover {
+  color: purple;
+}
+
+.green:hover {
+  color: #006400;
+}
+
+.lemon:hover {
+  color: #7B68EE;
+}
+
+.short:hover {
+  color: #ff6600;
+}
+
+.other:hover {
+  color: #333333;
+}
+
+.git-hub {
+  text-decoration: none;
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+}
+
+.git-btn {
+  text-align: center;
+  margin: 120px 3px 0 40px;
+  font-size: 25px;
+  color: aliceblue;
+}
+
+.side-text {
+  color: aliceblue;
+  font-size: 8px;
+}

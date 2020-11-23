@@ -1,0 +1,65 @@
+.follow-container {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 140px;
+}
+
+.follow-contents {
+  width: 30%;
+  margin: 0 0 0 auto;
+  text-align: right;
+}
+
+.follow-content {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.follower-count {
+  font-size: 16px;
+}
+
+.following-count {
+  font-size: 16px;
+}
+
+.btn-outline-secondary {
+  border-radius: 8px;
+  outline: none;
+  background-color: #93dded;
+}
+
+.user-wrap {
+  margin: 40px auto;
+  width: 40%;
+  overflow-y: scroll;
+}
+
+.users {
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #c0c0c0;
+  padding: 0 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.user-name {
+  font-size: 30px;
+  display: inline-block;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.following-user-link {
+  text-decoration: none;
+  color: #333333;
+}
+
+.no-follow {
+  font-size: 18px;
+}
+

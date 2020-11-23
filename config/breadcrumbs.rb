@@ -22,6 +22,16 @@ crumb :likes_user do |user|
   parent :user, user
 end
 
+crumb :following_user do |user|
+  link "フォローユーザー一覧", following_user_path(user)
+  parent :user, user
+end
+
+crumb :followers_user do |user|
+  link "フォロワー一覧", followers_user_path(user)
+  parent :user, user
+end
+
 crumb :post_search do
   link "フリーワード検索", post_search_posts_path
   parent :root
