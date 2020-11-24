@@ -12,6 +12,11 @@ crumb :squeeze do
   parent :root
 end
 
+crumb :ranking do
+  link "いいね数ランキング TOP8", ranking_posts_path
+  parent :root
+end
+
 crumb :user do |user|
   link "#{user.nickname}さんのページ", user_path(user)
   parent :root
