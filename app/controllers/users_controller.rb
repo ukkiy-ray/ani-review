@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user
-  before_action :authenticate_user!, only: [:likes]
+  before_action :authenticate_user!, only: [:likes, :following, :followers]
 
   def show
     @post_all = @user.posts.all
