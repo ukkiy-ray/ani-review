@@ -13,7 +13,7 @@ crumb :squeeze do
 end
 
 crumb :ranking do
-  link "いいね数ランキング TOP8", ranking_posts_path
+  link "いいね数ランキング", ranking_posts_path
   parent :root
 end
 
