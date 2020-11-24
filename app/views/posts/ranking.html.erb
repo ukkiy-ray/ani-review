@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="side-bar">
+    <%= render "side_bar" %>
+  </div>
+  <div class="main-wrapper">
+    <div class="main-container">
+      <div class="main-title">- レビューいいね数ランキング TOP8 -</div>
+      <div class="post-wrap">
+        <%= render partial: "post", locals: { posts: @posts } %>
+        <%= link_to "トップページに戻る", root_path, class: "link_to_root" %>
+      </div>
+    </div>
+  </div>
+</div>

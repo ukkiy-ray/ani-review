@@ -53,6 +53,10 @@ class PostsController < ApplicationController
     @posts = Post.search(params[:keyword]).page(params[:page]).per(7)
   end
 
+  def ranking
+    @posts = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(8).pluck(:post_id))
+  end
+
   private
 
   def post_params
