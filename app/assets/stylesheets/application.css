@@ -144,6 +144,7 @@ a, a:visited, a:focus, a:hover {
 }
 
 .link-to-user {
+  margin-top: 4px;
   display: inline-block;
   text-decoration: none;
   color: #696969;
@@ -153,6 +154,13 @@ a, a:visited, a:focus, a:hover {
 
 .link-to-user:hover {
   color: #6336f5;
+}
+
+.created-at {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 25px;
+  color: #696969;
 }
 
 .genre {
@@ -272,6 +280,19 @@ a, a:visited, a:focus, a:hover {
 .post-user {
   font-size: 18px;
   margin: 8px 16px 0 0;
+}
+
+.show-user {
+  margin-top: 4px;
+  display: inline-block;
+  text-decoration: none;
+  color: #696969;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+
+.show-user:hover {
+  color: #6336f5;
 }
 
 .link-to-user {

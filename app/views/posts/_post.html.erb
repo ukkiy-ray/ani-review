@@ -3,6 +3,9 @@
     <div class="title">
       <%= link_to "#{post.title}", post_path(post.id), class: "link-to-show" %>
       <%= link_to "by #{post.user.nickname}", user_path(post.user.id), class: "link-to-user" %>
+      <div class="created-at">
+        <%= post.created_at.to_s(:datetime_jp) %>
+      </div>
     </div>
     <div class="genre">
       <div class="upper-content">
