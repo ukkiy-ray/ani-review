@@ -1,3 +1,10 @@
+.notification-contents {
+  height: 100%;
+  width: 30%;
+  margin: 0 0 20px auto;
+  text-align: right;
+}
+
 .follow-container {
   height: 100%;
   width: 70%;

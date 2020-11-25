@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:likes, :following, :followers]
 
   def show
+    @notifications = current_user.passive_notifications
     @post_all = @user.posts.order(created_at: :desc)
     @posts = @post_all.page(params[:page]).per(7)
   end

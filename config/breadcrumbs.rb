@@ -37,6 +37,11 @@ crumb :followers_user do |user|
   parent :user, user
 end
 
+crumb :notifications do
+  link "新着通知一覧", notifications_path
+  parent :root
+end
+
 crumb :post_search do
   link "フリーワード検索", post_search_posts_path
   parent :root

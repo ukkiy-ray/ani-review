@@ -16,6 +16,13 @@
         <% end %>
       </div>
       <div class="show-wrap">
+        <% if user_signed_in? && current_user.id == @user.id %>
+          <% if @notifications.exists? %>
+            <div class="notification-contents">
+              <%= link_to "新着通知が#{@notifications.count}件届いています！", notifications_path, class: "fa fa-bell user-notification" %>
+            </div>
+          <% end %>
+        <% end %>
 
         <div class="follow-contents">
           <div class="follow-content">
@@ -37,7 +44,6 @@
             <%= link_to(likes_user_path(@user.id), method: :get, class: "my-favorite") do %>
               <span class="fa fa-heart favorite-btn"></span><span class="favorite">いいねした投稿はこちら</span>
             <% end %>
-
           <% else %>
             <%= "#{@post_all.count}件の記事があります。" %>
             <%= link_to(likes_user_path(@user.id), method: :get, class: "my-favorite") do %>

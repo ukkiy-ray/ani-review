@@ -1,0 +1,45 @@
+.trash {
+  text-decoration: none;
+  color: #333333;
+  font-size: 20px;
+  transition: all 0.5s;
+  margin: 15px 0;
+}
+
+.trash:hover {
+  color: #6336f5;
+}
+
+.notification-index {
+  font-size: 16px;
+}
+
+.notification-view {
+  border-bottom: 0.8px solid #c0c0c0;
+  padding: 0 4px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.bell {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333333;
+  transition: all 0.5s;
+  font-size: 18px;
+}
+
+.bell:hover {
+  color: #333333;
+  font-size: 20px;
+}
+
+.user-notification {
+  font-size: 14px;
+  text-decoration: none;
+  color: #333333;
+}
+
+.user-notification:hover {
+  color: #ff6600;
+}

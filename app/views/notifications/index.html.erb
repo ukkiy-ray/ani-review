@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="side-bar">
+    <%= render "posts/side_bar" %>
+  </div>
+  <div class="main-wrapper">
+    <div class="bread">
+      <% breadcrumb :notifications %>
+      <%= breadcrumbs separator: " &rsaquo; " %>
+    </div>
+    <div class="main-container">
+      <div class="main-title">- 通知 -</div>
+      <%= link_to "通知削除", notification_path(@notifications), method: :delete ,class: "fa fa-trash trash" %>
+      <% if @notifications.exists? %>
+        <div class="notification-index">
+          <%= render @notifications %>
+        </div>
+      <% else %>
+          <p>通知はありません</p>
+      <% end %>
+      <%= link_to "トップページに戻る", root_path, class: "link_to_root" %>
+      <%= paginate @notifications %>
+    </div>
+  </div>
+</div>
