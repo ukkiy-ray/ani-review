@@ -43,6 +43,11 @@ Things you may want to cover:
 
 
 # URL
+
+**このアプリケーションにはBASIC認証を設けてあります。**ご利用の際はお手数ですが以下のIDとPasswordをアクセス時に記入の上ご利用ください。
+* ID: utsuki
+* Pass: 0213
+
 - https://ani-review.herokuapp.com/
 
 ### テスト用ユーザーアカウント
