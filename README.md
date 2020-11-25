@@ -1,27 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 # アプリケーション名 / タイトル
 - Ani Review
@@ -40,6 +18,7 @@ Things you may want to cover:
 - フォロー機能
 - ユーザーのいいねした記事の閲覧
 - フォローした、またはフォローされたユーザー一覧の閲覧
+- いいねまたはフォローされた時の自分の通知情報の閲覧
 
 
 # URL
@@ -81,6 +60,12 @@ Things you may want to cover:
 12. ユーザーの詳細ページやマイページの右上にある「フォロワー○人」のボタンをクリックすると、そのユーザーのフォロワーが一覧で表示される画面に遷移します。
 
 13. ユーザーの詳細ページやマイページの右上にある「フォロー○人」のボタンをクリックすると、そのユーザーがフォローしているユーザーの一覧が表示される画面に遷移します。
+
+14. ヘッダー中央付近にあるベルのマーク（新着通知がある場合マイページにも表示される）をクリックすると、他のユーザーから受けたいいね、もしくはフォローされたという通知情報を確認できます。
+
+15. 通知の表示からも青い文字をクリックすることで相手のユーザー等の情報にアクセスすることが可能です。。
+
+16. 通知一覧ページ左上にある「通知削除」をクリックすると、一括で通知を全て削除することができます。。
 
 ### 機能確認後は、必ずヘッダー部分の「ログアウト」ボタンからログアウト処理を行っていただくようお願いいたします。
 
@@ -164,6 +149,7 @@ Things you may want to cover:
 - belongs_to :post
 - belongs_to :user
 
+
 ## relationships テーブル
 
 | Column        | Type      | Options     |
@@ -175,3 +161,19 @@ Things you may want to cover:
 
 - belongs_to :follower, class_name: "User"
 - belongs_to :following, class_name: "User"
+
+
+## notifications テーブル
+
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| visitor_id   | integer    | null: false                    |
+| visited_id   | integer    | null: false                    |
+| category_id  | integer    | null: false                    |
+| post_id      | integer    | null: false                    |
+| action       | string     | null: false, default: ''       |
+| checked      | boolean    | null: false, default: false    |
+
+- belongs_to :post, optional: true
+- belongs_to :visitor, class_name: 'User', foreign_key: 'visitor_id', optional: true
+- belongs_to :visited, class_name: 'User', foreign_key: 'visited_id', optional: true
