@@ -28,13 +28,13 @@ Things you may want to cover:
 
 
 # アプリケーション概要
-### ユーザー登録をしていなくても、下記の機能を利用できます。
+### ユーザー登録をしていなくても、下記の機能が利用可能です。
 - 投稿詳細の閲覧機能
 - 検索フォームからフリーワードでの検索機能、検索結果の閲覧
 - サイドバーにあるカテゴリーからの検索、またはいいねランキングでの検索結果の閲覧
 - ユーザー情報の閲覧(投稿した記事のみ)
 
-### ユーザー登録が完了しログインしている場合、上記に加え、下記の機能を利用できるようになります。
+### ユーザー登録が完了しログインすると、上記に加え、下記の機能が利用可能になります。
 - 新規投稿機能
 - いいね機能
 - フォロー機能
@@ -81,4 +81,92 @@ Things you may want to cover:
 
 
 #  目指した課題解決
-- 私はこのアプリケーションを通し、日本の代表的なサブカルチャーであるアニメに関するレビューや情報を、誰もが気軽に収集、共有、投稿することを可能にし、より多くの人にアニメの魅力を広め、更なる日本のアニメ文化の発展を目指して開発しました。
+- 私はこのアプリケーションを通し、日本の代表的なサブカルチャーであるアニメに関するレビューや情報を、誰もが気軽に収集、共有、投稿することを可能にし、より多くの人にアニメの魅力を伝え、更なる日本のアニメ文化の発展に貢献することを目指して開発しました。
+
+
+# DB設計について
+- 以下のテーブル設計とER図をもとに実装しました。
+
+## users テーブル
+
+| Column    | Type     | Options     |
+| --------- | -------- | ----------- |
+| nickname  | string   | null: false |
+| email     | string   | null: false |
+| password  | string   | null: false |
+
+### Association
+
+- has_many :posts
+- has_many :likes
+- has_many :following_relationships
+- has_many :following, through: :following_relationships
+- has_many :follower_relationships
+- has_many :followers, through: :follower_relationships
+
+
+## posts テーブル
+
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| title        | string     | null: false                    |
+| content      | text       | null: false                    |
+| category_id  | integer    | null: false                    |
+| user_id      | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- has_many :post_tag_relations
+- has_many :tags, through: :post_tag_relations
+- has_many :likes
+
+
+## tags テーブル
+
+| Column      | Type      | Options     |
+| ----------- | --------- | ----------- |
+| name        | string    | null: false |
+
+### Association
+
+- has_many :post_tag_relations
+- has_many :posts, through: :post_tag_relations
+
+
+## post_tag_relations テーブル
+
+| Column       | Type         | Options                        |
+| ------------ | ------------ | ------------------------------ |
+| post_id      | references   | null: false, foreign_key: true |
+| tag_id       | references   | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :post
+- belongs_to :tag
+
+
+## likes テーブル
+
+| Column       | Type         | Options                        |
+| ------------ | ------------ | ------------------------------ |
+| user_id      | references   | null: false, foreign_key: true |
+| post_id      | references   | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :post
+- belongs_to :user
+
+## relationships テーブル
+
+| Column        | Type      | Options     |
+| ------------- | --------- | ----------- |
+| following_id  | integer   | null: false |
+| follower_id   | integer   | null: false |
+
+### Association
+
+- belongs_to :follower, class_name: "User"
+- belongs_to :following, class_name: "User"
