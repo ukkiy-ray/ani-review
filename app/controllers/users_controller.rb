@@ -3,13 +3,13 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:likes, :following, :followers]
 
   def show
-    @post_all = @user.posts.all
-    @posts = @user.posts.order(created_at: :desc).page(params[:page]).per(7)
+    @post_all = @user.posts.order(created_at: :desc)
+    @posts = @post_all.page(params[:page]).per(7)
   end
 
   def likes
-    @post_all = Like.where(user_id: @user.id).all
-    @likes = Like.where(user_id: @user.id).order(created_at: :desc).page(params[:page]).per(7)
+    @post_all = Like.where(user_id: @user.id).order(created_at: :desc)
+    @likes = @post_all.page(params[:page]).per(7)
   end
 
   def following
