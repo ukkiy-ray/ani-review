@@ -30,8 +30,17 @@
 - https://ani-review.herokuapp.com/
 
 ### テスト用ユーザーアカウント
+
+- 複数用意しています。通知機能等を確認する際にご利用ください。
+
 * Email: test@gmail.com
 * Password: test00
+
+* Email: yamada@gmail.com
+* Password: yamada00
+
+* Email: tom@gmail.com
+* Password: tomtom01
 
 
 # 利用方法
