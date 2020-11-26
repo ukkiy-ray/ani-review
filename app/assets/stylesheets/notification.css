@@ -43,3 +43,21 @@
 .user-notification:hover {
   color: #ff6600;
 }
+
+.bell-text {
+  display: inline-block;
+  font-size: 14px;
+  color: white;
+}
+
+.gold {
+  text-decoration: none;
+  color: gold;
+  transition: all 0.5s;
+  font-size: 18px;
+}
+
+.gold:hover {
+  color: gold;
+  font-size: 20px;
+}

@@ -26,8 +26,17 @@
         </div>
         <div class="header-right">
           <% if user_signed_in? %>
-            <%= link_to(notifications_path, class: "bell") do %>
-              <span class="fa fa-bell"></span>
+            <% @notifications = current_user.passive_notifications %>
+            <% if @notifications.exists? %>
+              <%= link_to(notifications_path, class: "bell") do %>
+                <span class="fa fa-bell gold"></span>
+                <span class="bell-text"><%= @notifications.count %></span>
+              <% end %>
+
+            <% else %>
+              <%= link_to(notifications_path, class: "bell") do %>
+                <span class="fa fa-bell"></span>
+              <% end %>
             <% end %>
             <%= link_to "こんにちは、#{current_user.nickname}さん", user_path(current_user.id), class: "hello" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "sign-out" %>
