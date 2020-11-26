@@ -1,0 +1,53 @@
+<div class="main">
+  <div class="side-bar">
+    <%= render "posts/side_bar" %>
+  </div>
+  <div class="main-wrapper">
+    <div class="bread">
+      <% breadcrumb :time_line %>
+      <%= breadcrumbs separator: " &rsaquo; " %>
+    </div>
+    <div class="main-container">
+      <div class="main-title">
+        タイムライン<span class="time-line-text">フォローしているユーザーの投稿最新10件を表示します。</span>
+      </div>
+      <div class="post-wrap">
+        <% if @posts.present? %>
+          <% @posts.first(10).each do |post| %>
+            <div class="post">
+              <div class="title">
+                <%= link_to "#{post.title}", post_path(post.id), class: "link-to-show" %>
+                <%= link_to "by #{post.user.nickname}", user_path(post.user.id), class: "link-to-user" %>
+                <div class="created-at">
+                  <%= post.created_at.to_s(:datetime_jp) %>
+                </div>
+              </div>
+              <div class="genre">
+                <div class="upper-content">
+                  <div class="category">
+                    <%= post.category.name %>
+                  </div>
+
+                  <ul class="tag">
+                    <li class="tag-list">
+                      <%post.tags.each do |tag| %>
+                        #<%=tag.name%>
+                      <%end%>
+                    </li>
+                  </ul>
+                </div>
+                <div id="likes_buttons_<%= post.id %>", class="like-count">
+                  <%= render partial: 'likes/like', locals: { post: post} %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          フォローしているユーザーが存在しないか、またはフォローしているユーザーの投稿がありません。
+        <% end %>
+        <%= link_to "トップページに戻る", root_path, class: "link_to_root" %>
+      </div>
+      <%#= paginate @posts %>
+    </div>
+  </div>
+</div>

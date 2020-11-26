@@ -73,8 +73,15 @@
   <div class="ranking">
     <%= link_to 'いいね数ランキング TOP8', ranking_posts_path, class: "link-to-ranking" %>
   </div>
+  <% if user_signed_in? %>
+    <div class="time-line">
+      <%= link_to "TIME LINE", time_line_users_path, class: "link-to-tl" %>
+    </div>
+  <% end %>
   
+  <div class="git-link">
   <%= link_to("https://github.com/ukkiy-ray/ani-review", class: "github") do %>
     <span class="fa fa-github git-btn"></span><span class="side-text">github repository.</span>
   <% end %>
+  </div>
 </div>

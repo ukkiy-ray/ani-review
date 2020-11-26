@@ -100,16 +100,38 @@
   color: #e771c5;
 }
 
+.time-line {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.link-to-tl {
+  display: inline-block;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 16px;
+  letter-spacing: 4px;
+  transition: all 0.5s;
+}
+
+.link-to-tl:hover {
+  color: aqua;
+}
+
+.git-link {
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+}
+
 .git-hub {
   text-decoration: none;
-  margin-top: 30px;
   display: inline-block;
   width: 100%;
 }
 
-.git-btn {
-  text-align: center;
-  margin: 60px 3px 0 40px;
+.git-btn {  
   font-size: 25px;
   color: aliceblue;
 }

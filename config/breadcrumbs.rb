@@ -17,6 +17,11 @@ crumb :ranking do
   parent :root
 end
 
+crumb :time_line do
+  link "Time Line", time_line_users_path
+  parent :root
+end
+
 crumb :user do |user|
   link "#{user.nickname}さんのページ", user_path(user)
   parent :root

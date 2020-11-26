@@ -33,3 +33,9 @@
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 20px;
 }
+
+.time-line-text {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 10px;
+}

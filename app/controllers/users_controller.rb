@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user
-  before_action :authenticate_user!, only: [:likes, :following, :followers]
+  before_action :set_user, except: [:time_line]
+  before_action :authenticate_user!, only: [:likes, :following, :followers, :time_line]
 
   def show
     @notifications = current_user.passive_notifications
@@ -21,6 +21,16 @@ class UsersController < ApplicationController
   def followers
       @user  = User.find(params[:id])
       @users = @user.followers.order(created_at: :desc).page(params[:page]).per(10)
+  end
+
+  def time_line
+    @users = current_user.following.all
+    @posts = []
+    @users.each do |user|
+      posts = Post.where(user_id: user.id).order(created_at: :desc)
+      @posts.concat(posts)
+    end
+    @posts = @posts.sort_by{|post| post.created_at}.reverse
   end
 
   private

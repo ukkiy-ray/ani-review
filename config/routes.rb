@@ -17,6 +17,9 @@ Rails.application.routes.draw do
       get :following, :followers
       get 'likes'
     end
+    collection do
+      get 'time_line'
+    end
   end
 
   resources :relationships, only: [:create, :destroy]
