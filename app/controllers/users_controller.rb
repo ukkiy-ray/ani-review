@@ -3,9 +3,11 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:likes, :following, :followers, :time_line]
 
   def show
-    @notifications = current_user.passive_notifications
     @post_all = @user.posts.order(created_at: :desc)
     @posts = @post_all.page(params[:page]).per(7)
+    if user_signed_in?
+      @notifications = current_user.passive_notifications
+    end
   end
 
   def likes
