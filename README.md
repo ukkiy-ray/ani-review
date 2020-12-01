@@ -45,7 +45,9 @@
 
 
 # 利用方法
-1. ユーザー登録をします。テストアカウントを利用する場合、記載されているEmailとPasswordを入力しログインしてください。
+1. ヘッダーの右上の「新規登録」をクリックしユーザー登録をします。テストアカウントを利用する場合、ヘッダー右上の「ログイン」をクリックし記載されているEmailとPasswordを入力してログインしてください。
+
+[![Image from Gyazo](https://i.gyazo.com/7733099acd5faabd007ae0e89489e6db.gif)](https://gyazo.com/7733099acd5faabd007ae0e89489e6db)
 
 2. 新規投稿は、一覧ページの左上にある New Post をクリックすると新規投稿ページに遷移し、タイトル、投稿内容、タグを入力し、カテゴリーを選択後、「投稿する」ボタンをクリックすると投稿できます。
 
@@ -106,6 +108,8 @@
 - has_many :following, through: :following_relationships
 - has_many :follower_relationships
 - has_many :followers, through: :follower_relationships
+- has_many :active_notifications, foreign_key: 'visitor_id'
+- has_many :passive_notifications, foreign_key: 'visited_id'
 
 
 ## posts テーブル
@@ -123,6 +127,7 @@
 - has_many :post_tag_relations
 - has_many :tags, through: :post_tag_relations
 - has_many :likes
+- has_many :notifications
 
 
 ## tags テーブル
