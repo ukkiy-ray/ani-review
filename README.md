@@ -347,3 +347,21 @@
 - belongs_to :post, optional: true
 - belongs_to :visitor, class_name: 'User', foreign_key: 'visitor_id', optional: true
 - belongs_to :visited, class_name: 'User', foreign_key: 'visited_id', optional: true
+
+
+# ローカルでの動作方法
+
+* Ruby version
+2.6.5
+
+* Ruby on Rails version
+6.0.3.4
+
+```ターミナル
+  % git clone https://github.com/ukkiy-ray/ani-review.git
+  % cd ani-review
+  % bundle install
+  % yarn install
+  % rails db:create
+  % rails db:migrate
+```
