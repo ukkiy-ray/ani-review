@@ -413,3 +413,154 @@ a, a:visited, a:focus, a:hover {
 .pagination>li>a:hover {
   border-radius: 15px;
 }
+
+/*==========レスポンシブデザイン==============*/
+@media (max-width: 1024px) {
+  html, body{
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 599px) {
+  header {
+    height: 60px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .post-search-form {
+    margin-left: 0px;
+    width: 43%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .header-right {
+    margin-right: 0;
+    height: 100%;
+    position: absolute;
+    right: -5px;
+    width: 16%;
+  }
+
+  .sign-in {
+    margin-right: 0px;
+    font-size: 12px;
+    height: 0px;
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    position: absolute;
+    transition: none;
+  }
+
+  .sign-in:hover {
+    background: none;
+  }
+
+  .sign-up {
+    font-size: 12px;
+    display: inline-block;
+    line-height: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 35px;
+    transition: none;
+  }
+
+  .sign-up:hover {
+    background: none;
+    color: black;
+  }
+
+  .hello {
+    display: none;
+  }
+
+  .sign-out {
+    display: none;
+  }
+
+  .side-bar {
+    display: none;
+  }
+
+  .main-wrapper {
+    width: 100%;
+  }
+
+  .main-container {
+    width: 88%;
+    padding-top: 105px;
+  }
+
+  .main-title {
+    font-size: 25px;
+  }
+
+  .note {
+    font-size: 12px;
+  }
+
+  .pen {
+    font-size: 16px;
+  }
+
+  .count {
+    font-size: 10px;
+  }
+
+  .title {
+    position: relative;
+  }
+
+  .link-to-show {
+    font-size: 12px;
+  }
+
+  .link-to-user {
+    margin-top: 2px;
+    font-size: 8px;
+    position: absolute;
+    bottom: 2px;
+  }
+
+  .created-at {
+    display: none;
+  }
+
+  .genre {
+    margin-top: 5px;
+    font-size: 10px;
+    position: relative;
+  }
+
+  .like-count {
+    font-size: 13px;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+  }
+
+  .like-btn:hover {
+    font-size: 15px;
+  }
+
+  .unlike-btn:hover {
+    font-size: 15px;
+  }
+
+  .user-form {
+    padding: 200px 0;
+  }
+}
