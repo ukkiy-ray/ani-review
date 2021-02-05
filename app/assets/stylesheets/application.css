@@ -563,9 +563,6 @@ a, a:visited, a:focus, a:hover {
 
   .like-count {
     font-size: 13px;
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
   }
 
   .like-btn:hover {
@@ -606,5 +603,41 @@ a, a:visited, a:focus, a:hover {
   .select-box {
     font-size: 15px;
     padding: 0px;
+  }
+  /*投稿詳細ページ*/
+
+  .bread {
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    height: 3%;
+  }
+
+  .post-wrap {
+    margin: 2px auto;
+    width: 100%;
+  }
+
+  .show-title {
+    font-size: 18px;
+    align-items: flex-end;
+  }
+
+  .post-user {
+    margin: 0px;  
+  }
+
+  .show-user {
+    font-size: 12px;
+  }
+
+  .content {
+    height: auto;
+    font-size: 12px;
+  }
+
+  .bottom-contents {
+    font-size: 12px;
   }
 }
