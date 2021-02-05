@@ -419,6 +419,303 @@ a, a:visited, a:focus, a:hover {
   html, body{
     overflow: scroll;
   }
+
+  header {
+    height: 60px;
+    border: none;
+  }
+
+  .logo {
+    height: 75px;
+  }
+
+  .post-search-form {
+    margin-left: 0px;
+    width: 60%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .header-right {
+    margin-right: 0;
+    height: 100%;
+    position: absolute;
+    right: -5px;
+    width: 16%;
+  }
+
+  .sign-in {
+    margin-right: 0px;
+    font-size: 12px;
+    height: 0px;
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    position: absolute;
+    transition: none;
+  }
+
+  .sign-in:hover {
+    background: none;
+  }
+
+  .sign-up {
+    font-size: 12px;
+    display: inline-block;
+    line-height: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 35px;
+    transition: none;
+  }
+
+  .sign-up:hover {
+    background: none;
+    color: black;
+  }
+
+  .hello {
+    /*display: none;*/
+    margin-right: 0px;
+    font-size: 8px;
+    height: auto;
+    width: 100vw;
+    text-decoration: none;
+    color: black;
+    line-height: normal;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    text-align: right;
+    transition: none;
+  }
+
+  .hello:hover {
+    background: none;
+    color: black;
+  }
+
+  .sign-out {
+    /*display: none;*/
+    font-size: 8px;
+    display: inline-block;
+    line-height: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 28px;
+    left: 45px;
+    transition: none;
+  }
+
+  .sign-out:hover {
+    background: none;
+    color: black;
+  }
+
+
+  .bell {
+    position: relative;
+    top: 0px;
+    right: -10px;
+    margin-right: 0px;
+  }
+
+  .bell-text {
+    display: none;
+  }
+
+  /*============== ここまでヘッダー ====================*/
+  .side-bar {
+    padding-left: 10px;
+    height: 30px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    font-size: 15px;
+    position: absolute;
+    top: 60px;
+    border: none;
+  }
+
+  .side-title {
+    display: none;
+  }
+
+  .ranking {
+    line-height: 30px;
+    margin: 0 20px 0 0;
+    height: 30px;
+    width: auto;
+    text-align: center;
+  }
+
+  .link-to-ranking {
+    height: 30px;
+    display: inline-block;
+    color: aliceblue;
+    white-space: nowrap;
+    width: auto;
+    font-size: 12px;
+    transition: none;
+  }
+
+  .link-to-ranking:hover {
+    background: none;
+    color: aliceblue;
+  }
+
+  .time-line {
+    line-height: 30px;
+    margin: 0 20px 0 0;
+    height: 30px;
+    width: auto;
+    text-align: center;
+  }
+
+  .link-to-tl {
+    height: 30px;
+    display: inline-block;
+    color: aliceblue;
+    white-space: nowrap;
+    width: auto;
+    font-size: 12px;
+    transition: none;
+  }
+
+  .link-to-tl:hover {
+    background: none;
+    color: aliceblue;
+  }
+
+  .git-link {
+    display: none;
+  }
+
+  .side-contents {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .post-squeeze {
+    height: auto;
+    line-height: normal;
+    margin-right: 20px;
+  }
+
+  .post-squeeze:hover {
+    background: none;
+  }
+
+  .search-btn:hover {
+    font-size: 14px;
+    color: aliceblue;
+  }
+
+  .main-wrapper {
+    width: 100%;
+  }
+
+  /*=================ここまでサイドバー==============*/
+  .main-container {
+    padding-top: 135px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .note {
+    font-size: 12px;
+  }
+
+  .pen {
+    font-size: 18px;
+  }
+
+  .pen:hover {
+    font-size: 18px;
+  }
+
+  .created-at {
+    display: none;
+  }
+
+  .link_to_top {
+    color: #ff6600;
+  }
+
+  .bread {
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    height: 3%;
+  }
+/*============User Page===============*/
+  .notification-contents {
+    height: auto;
+    width: auto;
+  }
+
+  .user-notification {
+    font-size: 16px;
+  }
+
+  .follow-contents {
+    width: auto;
+  }
+
+  .follow-content {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .follow-or-unfollow {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+
+  .favorite-btn {
+    color: red;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  .favorite {
+    font-size: 14px;
+    transition: none;
+  }
+
+  .favorite:hover {
+    font-size: 14px;
+  }
+
+  .category-tag {
+    padding: 0;
+  }
 }
 
 /*=================================================スマートフォン====================================================*/
@@ -486,7 +783,6 @@ a, a:visited, a:focus, a:hover {
   }
 
   .hello {
-    /*display: none;*/
     margin-right: 0px;
     font-size: 8px;
     height: auto;
@@ -542,10 +838,11 @@ a, a:visited, a:focus, a:hover {
   }
   /* ここまでヘッダー */
   .side-bar {
-    padding: 0 10px;
+    padding-left: 10px;
     height: 30px;
     width: 100%;
     overflow-x: scroll;
+    overflow-y: hidden;
     font-size: 15px;
     position: absolute;
     top: 60px;
@@ -671,7 +968,7 @@ a, a:visited, a:focus, a:hover {
 
   .link-to-user {
     margin-top: 2px;
-    font-size: 8px;
+    font-size: 12px;
     position: absolute;
     bottom: 2px;
   }
@@ -718,7 +1015,7 @@ a, a:visited, a:focus, a:hover {
   }
 
   .post-input {
-    height: 75vh;
+    height: auto;
   }
 
   .post-field {
@@ -733,11 +1030,6 @@ a, a:visited, a:focus, a:hover {
 
   .bread {
     display: none;
-    /* margin: 0;
-    position: absolute;
-    top: 13%;
-    left: 4%;
-    height: 3%; */
   }
 
   .post-wrap {
@@ -769,6 +1061,11 @@ a, a:visited, a:focus, a:hover {
 
   .detail-category {
     text-align: right;
+  }
+
+  .link-to-top {
+    margin-top: 20px;
+    color: #ff6600;
   }
 
   /*ユーザー詳細ページ*/
@@ -882,5 +1179,13 @@ a, a:visited, a:focus, a:hover {
 
   .sign-out {
     left: -28px;
+  }
+
+  .link-to-user {
+    font-size: 10px;
+  }
+
+  .to-session {
+    font-size: 10px;
   }
 }
