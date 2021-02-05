@@ -436,7 +436,7 @@ a, a:visited, a:focus, a:hover {
   }
 
   .search-input {
-    width: 100%;
+    width: 85%;
   }
 
   .header-right {
@@ -491,6 +491,18 @@ a, a:visited, a:focus, a:hover {
     display: none;
   }
 
+
+  .bell {
+    position: absolute;
+    top: -13px;
+    right: 10px;
+    margin-right: 0px;
+  }
+
+  .bell-text {
+    display: none;
+  }
+  /* ここまでヘッダー */
   .side-bar {
     display: none;
   }
@@ -513,6 +525,10 @@ a, a:visited, a:focus, a:hover {
   }
 
   .pen {
+    font-size: 16px;
+  }
+
+  .pen:hover {
     font-size: 16px;
   }
 
@@ -562,5 +578,33 @@ a, a:visited, a:focus, a:hover {
 
   .user-form {
     padding: 200px 0;
+  }
+
+  /* 投稿ページ */
+  .post-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .title-input {
+    font-size: 18px;
+  }
+
+  .category-tag {
+    padding: 0px;
+    display: block;
+  }
+
+  .post-input {
+    height: 75vh;
+  }
+
+  .post-field {
+    margin-bottom: 8px;
+  }
+
+  .select-box {
+    font-size: 15px;
+    padding: 0px;
   }
 }
