@@ -415,7 +415,7 @@ a, a:visited, a:focus, a:hover {
 }
 
 /*=================================================レスポンシブデザイン==============================================*/
-@media (max-width: 1024px) {
+@media (max-width: 1141px) {
   html, body{
     overflow: scroll;
   }
@@ -483,7 +483,6 @@ a, a:visited, a:focus, a:hover {
   }
 
   .hello {
-    /*display: none;*/
     margin-right: 0px;
     font-size: 8px;
     height: auto;
@@ -507,7 +506,6 @@ a, a:visited, a:focus, a:hover {
   }
 
   .sign-out {
-    /*display: none;*/
     font-size: 8px;
     display: inline-block;
     line-height: 30px;
@@ -662,7 +660,7 @@ a, a:visited, a:focus, a:hover {
   .bread {
     margin: 0;
     position: absolute;
-    top: 10%;
+    bottom: 10px;
     left: 4%;
     height: 3%;
   }
@@ -719,7 +717,7 @@ a, a:visited, a:focus, a:hover {
 }
 
 /*=================================================スマートフォン====================================================*/
-@media (max-width: 599px) {
+@media (max-width: 767px) {
   header {
     height: 60px;
     border: none;
@@ -806,7 +804,6 @@ a, a:visited, a:focus, a:hover {
   }
 
   .sign-out {
-    /*display: none;*/
     font-size: 8px;
     display: inline-block;
     line-height: 30px;
