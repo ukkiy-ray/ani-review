@@ -33,7 +33,7 @@
                 <%= link_to "フォロー#{@user.following.count}人", following_user_path(@user.id), id: "following-count_#{ @user.id }", class: "following-count" %>
             </div>
           </div>
-          <div>
+          <div class="follow-or-unfollow">
               <%= render "follow_form" %>
           </div>
         </div>

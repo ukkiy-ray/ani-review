@@ -534,6 +534,11 @@ a, a:visited, a:focus, a:hover {
 
   .count {
     font-size: 10px;
+    color: #333333;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
   .title {
@@ -638,6 +643,49 @@ a, a:visited, a:focus, a:hover {
   }
 
   .bottom-contents {
+    font-size: 12px;
+  }
+
+  /*ユーザー詳細ページ*/
+
+  .notification-contents {
+    height: auto;
+    width: auto;
+  }
+
+  .user-notification {
+    font-size: 12px;
+  }
+
+  .follow-contents {
+    width: auto;
+  }
+
+  .follow-content {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .favorite-btn {
+    color: red;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  .favorite:hover {
+    font-size: 14px;
+  }
+
+  .follow-or-unfollow {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 4px 8px;
     font-size: 12px;
   }
 }
