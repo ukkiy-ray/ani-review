@@ -36,7 +36,7 @@
                   <%= render partial: 'likes/like', locals: { post: @post} %>
                 </div>
               </li>
-              <li><%= @post.category.name %></li>
+              <li class="detail-category"><%= @post.category.name %></li>
               <li class="tag-list">
                 <% @tags.each do |tag| %>
                   <%= "##{tag.name}" %>

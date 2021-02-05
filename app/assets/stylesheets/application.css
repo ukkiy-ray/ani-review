@@ -414,16 +414,18 @@ a, a:visited, a:focus, a:hover {
   border-radius: 15px;
 }
 
-/*==========レスポンシブデザイン==============*/
+/*=================================================レスポンシブデザイン==============================================*/
 @media (max-width: 1024px) {
   html, body{
     overflow: scroll;
   }
 }
 
+/*=================================================スマートフォン====================================================*/
 @media (max-width: 599px) {
   header {
     height: 60px;
+    border: none;
   }
 
   .logo {
@@ -484,11 +486,47 @@ a, a:visited, a:focus, a:hover {
   }
 
   .hello {
-    display: none;
+    /*display: none;*/
+    margin-right: 0px;
+    font-size: 8px;
+    height: auto;
+    width: 100vw;
+    text-decoration: none;
+    color: black;
+    line-height: normal;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 96px;
+    right: 10px;
+    text-align: right;
+    transition: none;
+  }
+
+  .hello:hover {
+    background: none;
+    color: black;
   }
 
   .sign-out {
-    display: none;
+    /*display: none;*/
+    font-size: 8px;
+    display: inline-block;
+    line-height: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: -20px;
+    transition: none;
+  }
+
+  .sign-out:hover {
+    background: none;
+    color: black;
   }
 
 
@@ -504,20 +542,102 @@ a, a:visited, a:focus, a:hover {
   }
   /* ここまでヘッダー */
   .side-bar {
+    padding: 0 10px;
+    height: 30px;
+    width: 100%;
+    overflow-x: scroll;
+    font-size: 15px;
+    position: absolute;
+    top: 60px;
+    border: none;
+  }
+
+  .side-title {
     display: none;
   }
 
+  .ranking {
+    line-height: 30px;
+    margin: 0 20px 0 0;
+    height: 30px;
+    width: auto;
+    text-align: center;
+  }
+
+  .link-to-ranking {
+    height: 30px;
+    display: inline-block;
+    color: aliceblue;
+    white-space: nowrap;
+    width: auto;
+    font-size: 12px;
+    transition: none;
+  }
+
+  .link-to-ranking:hover {
+    background: none;
+    color: aliceblue;
+  }
+
+  .time-line {
+    line-height: 30px;
+    margin: 0 20px 0 0;
+    height: 30px;
+    width: auto;
+    text-align: center;
+  }
+
+  .link-to-tl {
+    height: 30px;
+    display: inline-block;
+    color: aliceblue;
+    white-space: nowrap;
+    width: auto;
+    font-size: 12px;
+    transition: none;
+  }
+
+  .link-to-tl:hover {
+    background: none;
+    color: aliceblue;
+  }
+
+  .git-link {
+    display: none;
+  }
+
+  .side-contents {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .post-squeeze {
+    height: auto;
+    line-height: normal;
+    margin-right: 20px;
+  }
+
+  .post-squeeze:hover {
+    background: none;
+  }
+
+  .search-btn:hover {
+    font-size: 14px;
+    color: aliceblue;
+  }
+  
   .main-wrapper {
     width: 100%;
   }
 
   .main-container {
     width: 88%;
-    padding-top: 105px;
+    padding-top: 120px;
   }
 
   .main-title {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .note {
@@ -612,11 +732,12 @@ a, a:visited, a:focus, a:hover {
   /*投稿詳細ページ*/
 
   .bread {
-    margin: 0;
+    display: none;
+    /* margin: 0;
     position: absolute;
-    top: 10%;
+    top: 13%;
     left: 4%;
-    height: 3%;
+    height: 3%; */
   }
 
   .post-wrap {
@@ -646,6 +767,10 @@ a, a:visited, a:focus, a:hover {
     font-size: 12px;
   }
 
+  .detail-category {
+    text-align: right;
+  }
+
   /*ユーザー詳細ページ*/
 
   .notification-contents {
@@ -673,8 +798,13 @@ a, a:visited, a:focus, a:hover {
     margin-right: 4px;
   }
 
+  .favorite {
+    font-size: 12px;
+    transition: none;
+  }
+
   .favorite:hover {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .follow-or-unfollow {
@@ -687,5 +817,70 @@ a, a:visited, a:focus, a:hover {
   .btn {
     padding: 4px 8px;
     font-size: 12px;
+  }
+
+  /*フォロワー一覧*/
+  .user-wrap {
+    width: auto;
+  }
+
+  .users {
+    height: auto;
+  }
+
+  .user-name {
+    font-size: 25px;
+  }
+
+  /*通知ページ*/
+  .trash{
+    font-size: 16px;
+  }
+
+  .notification-index {
+    font-size: 12px;
+  }
+
+  .notification-view {
+    padding: 8px 4px;
+    height: auto;
+    line-height: 100%;
+  }
+
+  .nothing-message {
+    font-size: 14px;
+  }
+
+  .nothing {
+    font-size: 14px;
+  }
+
+  .time-line-text {
+    font-size: 12px;
+    margin: 0 auto;
+  }
+
+  .rank {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo {
+    height: 40px;
+  }
+
+  .search-input {
+    width: 90%;
+    height: 20px;
+    padding: 0px 5px;
+  }
+
+  .search-input::placeholder {
+    font-size: 10px;
+  }
+
+  .sign-out {
+    left: -28px;
   }
 }
