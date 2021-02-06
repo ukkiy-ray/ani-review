@@ -51,9 +51,13 @@
 ### 追記：safariでの表示、スマートフォン、タブレットでの表示に対応いたしました。
 
 * iPhone6/7/8 plus
+
+
 [![Image from Gyazo](https://i.gyazo.com/e4176988ee6848ffcfbf7249fc0194a1.png)](https://gyazo.com/e4176988ee6848ffcfbf7249fc0194a1)
 
 * iPad
+
+
 [![Image from Gyazo](https://i.gyazo.com/f6b46b1aa794279e1d7178f3087194d8.png)](https://gyazo.com/f6b46b1aa794279e1d7178f3087194d8)
 
 
