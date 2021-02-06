@@ -649,6 +649,10 @@ a, a:visited, a:focus, a:hover {
     font-size: 18px;
   }
 
+  .link-to-show {
+    font-size: 16px;
+  }
+
   .created-at {
     display: none;
   }
