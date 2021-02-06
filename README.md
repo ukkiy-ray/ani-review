@@ -47,9 +47,14 @@
 * Email: tom@gmail.com
 * Password: tomtom01
 
-### 使用環境によってビューファイルのレイアウトが崩れる場合がありますが、私のフロントに関する知識と技術不足によるものです。こちらに関しましては随時修正と更新を行って参ります。ご了承頂きますようお願い申し上げます。
 
 ### 追記：safariでの表示、スマートフォン、タブレットでの表示に対応いたしました。
+
+* iPhone6/7/8 plus
+[![Image from Gyazo](https://i.gyazo.com/e4176988ee6848ffcfbf7249fc0194a1.png)](https://gyazo.com/e4176988ee6848ffcfbf7249fc0194a1)
+
+* iPad
+[![Image from Gyazo](https://i.gyazo.com/f6b46b1aa794279e1d7178f3087194d8.png)](https://gyazo.com/f6b46b1aa794279e1d7178f3087194d8)
 
 
 # 利用方法
